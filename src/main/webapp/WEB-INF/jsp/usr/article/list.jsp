@@ -24,7 +24,7 @@
       <th>${article.id}</th>
       <td>${article.createDate}</td>
       <td>${article.modifyDate}</td>
-      <td>${article.memberId}</td>
+      <td>${article.extra__memberNickname}</td>
       <td>
         <a class="btn-text-link block w-full truncate">
           ${article.title}

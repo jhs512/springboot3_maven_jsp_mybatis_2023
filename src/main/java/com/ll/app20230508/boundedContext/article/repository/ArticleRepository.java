@@ -10,8 +10,11 @@ import java.util.List;
 public interface ArticleRepository {
     @Select("""
             <script>
-            SELECT A.*
+            SELECT A.*,
+            M.nickname AS extra__memberNickname
             FROM article AS A
+            LEFT JOIN `member` AS M
+            ON A.memberId = M.id
             ORDER BY A.id DESC
             </script>
             """)
